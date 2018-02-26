@@ -7,16 +7,18 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Roboto">
 
     <title>Ricky Kuang</title>
   </head>
+
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark px-4">
       <a class="navbar-brand" href="#">Ricky Kuang</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-items" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="fas fa-bars"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-items">
         <div class="navbar-nav ml-auto">
@@ -27,13 +29,35 @@
       </div>
     </nav>
 
-
     <div class="header">
-      <div class="header-text text-center">
-        <h1 class="display-4">Hello, World!</h1>
-        <p class="lead">Welcome to my website!</p>
+      <div class="header-inner">
+        <h1>Hello, World!</h1>
+        <p>Welcome to my website!</p>
+        <!-- <form method="get" action="{{ url_for('static', filename='rkuang-resume.pdf') }}">
+          <button type="submit" class="btn btn-danger">
+            <span class="fas fa-cloud-download-alt"></span>
+            Resume
+          </button>
+        </form> -->
+        <a class="btn btn-danger" href="{{ url_for('static', filename='rkuang-resume.pdf') }}" download="rkuang-resume.pdf">
+          <span class="fas fa-cloud-download-alt"></span>
+          Resume
+        </a>
       </div>
     </div>
+
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="https://github.com/rkuang/" class="fab fa-github"></a></li>
+        <li><a href="https://www.linkedin.com/in/ricky-kuang/" class="fab fa-linkedin"></a></li>
+        <li><a href="mailto:rkuang26@gmail.com" class="fas fa-envelope"></a></li>
+      </ul>
+
+      Ricky Kuang
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
