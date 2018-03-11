@@ -1,11 +1,10 @@
 html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  background-color: #1d242a;
 }
 
 body {
-  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../banner.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0)), url("../banner.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,6 +45,7 @@ body {
 
 .header {
   height: 100%;
+  margin-top: -51px;
   text-align: center;
   position: relative;
 }
@@ -57,7 +57,7 @@ body {
     /*padding: 200px 0;*/
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
