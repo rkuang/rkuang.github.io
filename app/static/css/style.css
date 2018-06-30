@@ -87,8 +87,9 @@ body {
 
   .header .learn_more {
     position: absolute;
-    bottom: 30px;
+    bottom: 10%;
     transform: translate(-50%, -50%);
+    font-size: 0.85em;
   }
 
     .header .learn_more a {
