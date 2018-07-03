@@ -52,15 +52,12 @@ body {
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.225em;
-  left: 50%;
 }
 
   .header .header-inner {
-    /*padding: 200px 0;*/
-    margin: 0;
-    position: absolute;
-    top: 55%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: 30%;
+    margin: auto;
   }
 
     .header .header-inner h1 {
@@ -74,7 +71,8 @@ body {
     }
 
     .header .header-inner p {
-      margin-bottom: 28px
+      margin-bottom: 28px;
+      line-height: 2;
     }
 
     .header .header-inner .btn {
@@ -88,7 +86,8 @@ body {
   .header .learn_more {
     position: absolute;
     bottom: 10%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    right: 0;
     font-size: 0.85em;
   }
 
