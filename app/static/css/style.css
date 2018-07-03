@@ -10,14 +10,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: white;
 }
 
 .navbar {
   padding: 10px!important;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
   font-weight: 800;
-  /*font-size: 0.25em;*/
 }
 
   .navbar-brand {
@@ -35,7 +35,6 @@ body {
   }
 
   .navbar-dark .navbar-toggler {
-    color: white;
     border-color: rgba(255,255,255,0);
   }
 
@@ -44,38 +43,37 @@ body {
   }
 
 
-.header {
+#header {
   height: 100%;
   margin-top: -51px;
   text-align: center;
   position: relative;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.225em;
 }
 
-  .header .header-inner {
+  #header .header-inner {
     position: relative;
     top: 30%;
     margin: auto;
   }
 
-    .header .header-inner h1 {
+    #header .header-inner h1 {
       font-weight: 800;
       font-size: 1.5em;
+      letter-spacing: 0.5em;
       display: inline-block;
       border: 2px;
       border-style: solid none solid none;
       padding: 20px;
+      padding-left: 35px;
       margin-bottom: 28px
     }
 
-    .header .header-inner p {
+    #header .header-inner p {
       margin-bottom: 28px;
       line-height: 2;
     }
 
-    .header .header-inner .btn {
+    #header .header-inner .btn {
       padding: 8px 30px;
       text-transform: uppercase;
       font-size: 0.9em;
@@ -83,22 +81,50 @@ body {
       background-color: rgb(255, 61, 61)
     }
 
-  .header .learn_more {
+  #header .learn_more {
     position: absolute;
     bottom: 10%;
     left: 0;
     right: 0;
     font-size: 0.85em;
+    line-height: 2.5em;
   }
 
-    .header .learn_more a {
+    #header .learn_more a {
       color: white;
     }
 
-    .header .learn_more a:hover {
-      text-decoration: none;
+      #header .learn_more a:hover {
+        text-decoration: none;
+      }
+
+    #header .learn_more i {
+      font-size: 2em;
     }
 
+
+#about {
+  display: flex;
+  background-color: #505393;
+  width: 100%;
+  padding: 100px 100px 100px 150px;
+}
+
+  #about .avatar {
+    border-right: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.125);
+    padding: 50px 100px 50px 0;
+  }
+
+    #about .avatar img {
+      scale: 60%;
+      border-radius: 50%;
+    }
+
+  #about .summary {
+    padding: 50px 100px;
+  }
 
 #footer {
   padding: 4em 0 4em 0 ;
@@ -116,7 +142,7 @@ body {
     }
 
       #footer .icons a:hover {
-        color: #fff;
+        color: white;
       }
 
 .icons {
@@ -141,8 +167,7 @@ body {
     /*background-color: rgba(0, 0, 0, 0.25)!important;*/
   }
 
-  .header h1 {
-    font-weight: 800;
-    font-size: 2.25em;
+  #header .header-inner h1 {
+    font-size: 2em;
   }
 }
