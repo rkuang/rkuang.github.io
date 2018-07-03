@@ -105,26 +105,30 @@ body {
 
 
 #about {
-  display: flex;
+  display: block;
   background-color: #505393;
   width: 100%;
-  padding: 100px 100px 100px 150px;
+  padding: 5% 10%;
+  font-size: .8em;
 }
 
   #about .avatar {
-    border-right: solid;
+    border-style: none none solid none;
     border-width: 2px;
-    border-color: rgba(0, 0, 0, 0.125);
-    padding: 50px 100px 50px 0;
+    border-color: rgba(0,0,0, .125);
+    padding-bottom: 5%;
   }
 
     #about .avatar img {
-      scale: 60%;
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      scale: 30%;
       border-radius: 50%;
     }
 
   #about .summary {
-    padding: 50px 100px;
+    padding: 5% 5%;
   }
 
     #about .summary h1 {
@@ -134,9 +138,10 @@ body {
     }
 
     #about .summary p {
-      color: rgba(255, 255, 255, 0.70);
+      color: rgba(255, 255, 255, 0.75);
       text-transform: none;
       line-height: 1.8em;
+      margin-bottom: 0;
     }
 
 #footer {
@@ -174,7 +179,21 @@ body {
       text-decoration: none;
     }
 
+@media (min-width: 500px) {
+  #about {
+    font-size: .9em;
+  }
+
+  #about .avatar img {
+    width: 200px;
+  }
+}
+
 @media (min-width: 768px) {
+  #about {
+    font-size: 1em;
+  }
+
   .bg-dark {
     background-color: transparent!important;
     /*background-color: rgba(0, 0, 0, 0.25)!important;*/
@@ -183,4 +202,36 @@ body {
   #header .header-inner h1 {
     font-size: 2em;
   }
+}
+
+@media (min-width: 1366px) {
+  #about {
+    display: flex;
+    padding: 100px 15%;
+  }
+  
+    #about .avatar {
+      border-style: none solid none none;
+      padding: 75px 75px;
+    }
+  
+      #about .avatar img {
+        width: 300px;
+      }
+  
+    #about .summary {
+      display: block;
+      margin: auto;
+    }
+  
+      #about .summary h1 {
+        font-size: 1.60em;
+        font-weight: 800;
+        line-height: 1.75em;
+      }
+  
+      #about .summary p {
+        text-transform: none;
+        line-height: 1.8em;
+      }
 }
