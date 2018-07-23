@@ -105,10 +105,11 @@ body {
 
 
 #about {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: #505393;
+  padding: 10%;
   width: 100%;
-  padding: 10% 10%;
   font-size: .8em;
 }
 
@@ -123,7 +124,6 @@ body {
       display: block;
       width: 50%;
       margin: 0 auto;
-      scale: 30%;
       border-radius: 50%;
     }
 
@@ -139,7 +139,7 @@ body {
     }
 
     #about .summary p {
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255, 255, 255, 0.90);
       text-transform: none;
       line-height: 1.8em;
       margin-bottom: 0;
@@ -204,15 +204,17 @@ body {
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1280px) {
   #about {
-    display: flex;
-    padding: 100px 15%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5% 8%;
   }
   
     #about .avatar {
       border-style: none solid none none;
-      padding: 75px 75px;
+      padding: 5%;
+      margin: auto 0;
     }
   
       #about .avatar img {
@@ -221,7 +223,8 @@ body {
   
     #about .summary {
       display: block;
-      margin: auto;
+      padding: 5%;
+      margin: auto 0;
     }
   
       #about .summary h1 {
