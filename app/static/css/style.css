@@ -15,6 +15,8 @@ body {
 }
 
 .navbar {
+  width: 100%;
+  position: fixed;
   padding: 10px!important;
   font-weight: 800;
   z-index: 1;
@@ -45,7 +47,6 @@ body {
 
 #header {
   height: 100%;
-  margin-top: -51px;
   text-align: center;
   position: relative;
   background-color: rgba(38, 51, 51, 0.35);
@@ -146,10 +147,11 @@ body {
     }
 
 #footer {
-  padding: 150px 0;
+  padding: 7% 0 5% 0;
   background-color: rgba(38, 51, 51, 0.7);
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
+  line-height: 3em;
 }
 
   #footer .icons {
@@ -191,6 +193,10 @@ body {
 }
 
 @media (min-width: 768px) {
+  nav {
+    transition: 0.7s;
+  }
+
   .bg-dark {
     background-color: transparent!important;
   }
@@ -201,6 +207,10 @@ body {
 
   #about {
     font-size: 1em;
+  }
+
+  .changeColor {
+    background-color: #1d242a!important;
   }
 }
 
