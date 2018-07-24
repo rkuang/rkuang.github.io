@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function() {
     $("a[href^='#']").click(function(e) {
         console.log("# clicked");
         e.preventDefault();
@@ -9,9 +9,8 @@ $(document).ready(function(){
             scrollTop: position
         });
     });
-});
 
-$(function() {
+
     $(window).scroll(function () {
         var position = document.getElementById("about").offsetTop - 51;
 
@@ -24,4 +23,6 @@ $(function() {
             $('nav').removeClass('changeColor')
         }
     });
+
+    $('body').addClass("load");
 });
