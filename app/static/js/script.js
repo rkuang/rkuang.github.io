@@ -14,11 +14,11 @@ $(function() {
     $(window).scroll(function () {
         var position = document.getElementById("about").offsetTop - 51;
 
-        if ($(this).scrollTop() >= position-51) {
+        if ($(this).scrollTop() >= position) {
             console.log("background black")
             $('nav').addClass('changeColor')
         }
-        if ($(this).scrollTop() < position-51) {
+        if ($(this).scrollTop() < position) {
             console.log("background transparent")
             $('nav').removeClass('changeColor')
         }
