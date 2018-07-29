@@ -7,7 +7,7 @@ $(function() {
     
         $("body, html").animate({
             scrollTop: position
-        });
+        }, 800);
     });
 
 
@@ -22,6 +22,11 @@ $(function() {
             console.log("background transparent")
             $('nav').removeClass('changeColor')
         }
+    });
+
+    $('nav>.navbar-collapse>.navbar-nav>.nav-item').on('click', function(){
+        console.log("nav item clicked");
+        $('.navbar-collapse').collapse('hide');
     });
 
     $('body').addClass("load");
