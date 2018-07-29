@@ -12,7 +12,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.25em;
   color: white;
-  transition: 2s opacity;
+  transition-property: opacity;
+  transition-delay: 1s;
+  transition-duration: 3s;
   opacity: 0;
 }
 
@@ -160,6 +162,20 @@ body {
       line-height: 1.8em;
       margin-bottom: 0;
     }
+
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  background-color: #2e3842;
+  height: 80vh;
+}
+
+
+#gap {
+  background-color: rgba(38, 51, 51, 0.35);
+  height: 40vh;
+}
 
 #footer {
   padding: 7% 0 5% 0;
