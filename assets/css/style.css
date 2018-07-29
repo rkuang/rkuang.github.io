@@ -107,19 +107,16 @@ body {
     margin-left: -5em;
     font-size: 0.85em;
     line-height: 2.5em;
+    color: white!important;
+    text-decoration: none!important;
   }
 
-  #header a .learn_more {
-    color: white;
+  #header #learn_more:hover {
+    transition: .5s;
+    font-size: 1em;
   }
 
-    #header a:hover {
-      transition: font-size .4s;
-      text-decoration: none;
-      font-size: 1.05em;
-    }
-
-  #header .learn_more i {
+  #header i {
     font-size: 2em;
   }
 
