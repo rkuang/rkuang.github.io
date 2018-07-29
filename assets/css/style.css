@@ -39,6 +39,10 @@ body {
     font-size: 0.7em;
   }
 
+  .navbar-dark .navbar-nav .nav-link {
+    transition: color 0.3s;
+  }
+
   .bg-dark {
     background-color: #1d242a!important
   }
@@ -47,22 +51,26 @@ body {
     color: rgba(255, 255, 255, 0.5);
   }
 
+  .navbar-dark .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
   .navbar-dark .navbar-toggler {
     border: none;
   }
 
 
 #header {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   text-align: center;
-  position: relative;
+  justify-content: center;
   background-color: rgba(38, 51, 51, 0.35);
 }
 
   #header .header-inner {
     position: relative;
-    top: 30%;
-    margin: auto;
   }
 
     #header .header-inner h1 {
@@ -78,7 +86,7 @@ body {
     }
 
     #header .header-inner p {
-      margin-bottom: 28px;
+      margin-bottom: 1.8em;
       line-height: 2;
     }
 
@@ -87,30 +95,33 @@ body {
       text-transform: uppercase;
       font-size: 0.9em;
       letter-spacing: 0.225em;
-      background-color: rgb(255, 61, 61)
+      background-color: rgb(255, 61, 61);
+      margin-bottom: 4.2em;
     }
 
-  #header .learn_more {
+  #header #learn_more {
     position: absolute;
     bottom: 10%;
-    left: 0;
-    right: 0;
+    left: 50%;
+    width: 10em;
+    margin-left: -5em;
     font-size: 0.85em;
     line-height: 2.5em;
   }
 
-    #header .learn_more a {
-      color: white;
+  #header a .learn_more {
+    color: white;
+  }
+
+    #header a:hover {
+      transition: font-size .4s;
+      text-decoration: none;
+      font-size: 1.05em;
     }
 
-      #header .learn_more a:hover {
-        text-decoration: none;
-      }
-
-    #header .learn_more i {
-      font-size: 2em;
-    }
-
+  #header .learn_more i {
+    font-size: 2em;
+  }
 
 #about {
   display: flex;
