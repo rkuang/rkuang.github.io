@@ -3,7 +3,7 @@ $(function() {
         console.log("# clicked");
         e.preventDefault();
 
-        var position = $($(this).attr("href")).offset().top;
+        var position = $($(this).attr("href")).offset().top-51;
     
         $("body, html").animate({
             scrollTop: position
