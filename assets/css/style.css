@@ -17,7 +17,7 @@ body {
 }
 
 .load {
-  opacity: 1;
+  opacity: 1!important;
 }
 
 .navbar {
@@ -30,7 +30,8 @@ body {
 
   .navbar-brand {
     margin-left: 10px;
-    font-size: 0.9em
+    font-size: 0.9em;
+    transition: opacity 0.5s, color 0.3s;
   }
 
   #navbar-items {
@@ -42,11 +43,11 @@ body {
     background-color: #1d242a!important
   }
 
-  .navbar-dark .navbar-toggler {
-    border-color: rgba(255,255,255,0);
+  .navbar-dark .navbar-brand {
+    color: rgba(255, 255, 255, 0.5);
   }
 
-  .navbar-togger-icon {
+  .navbar-dark .navbar-toggler {
     border: none;
   }
 
@@ -115,7 +116,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #505393;
-  padding: 10%;
+  padding: 5%;
   width: 100%;
   font-size: .8em;
 }
@@ -129,13 +130,13 @@ body {
 
     #about .avatar img {
       display: block;
-      width: 50%;
+      width: 200px;
       margin: 0 auto;
       border-radius: 50%;
     }
 
   #about .summary {
-    padding: 2.5% 5%;
+    padding: 2.5%;
   }
 
     #about .summary h1 {
@@ -166,10 +167,12 @@ body {
 
     #footer .icons a {
       color: rgba(255, 255, 255, 0.5);
+      transition: .7s color, .7s font-size;
     }
 
       #footer .icons a:hover {
         color: white;
+        font-size: 1.05em;
       }
 
 .icons {
@@ -192,15 +195,11 @@ body {
   #about {
     font-size: .9em;
   }
-
-  #about .avatar img {
-    width: 200px;
-  }
 }
 
 @media (min-width: 768px) {
   nav {
-    transition: 0.7s;
+    transition: 0.7s all;
   }
 
   .bg-dark {
@@ -224,7 +223,7 @@ body {
   #about {
     flex-direction: row;
     justify-content: space-around;
-    padding: 5% 8%;
+    padding: 3% 8%;
   }
   
     #about .avatar {
@@ -234,7 +233,7 @@ body {
     }
   
       #about .avatar img {
-        width: 300px;
+        width: 250px;
       }
   
     #about .summary {
