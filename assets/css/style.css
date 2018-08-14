@@ -3,6 +3,10 @@ html, body {
   background-color: #1d242a;
 }
 
+p {
+  text-transform: none;
+}
+
 body {
   background-image: url("../../images/banner.jpg");
   background-position: center;
@@ -15,7 +19,7 @@ body {
   transition-property: opacity;
   transition-delay: 1s;
   transition-duration: 3s;
-  opacity: 0;
+  opacity: 1;
 }
 
 .load {
@@ -34,6 +38,11 @@ body {
     margin-left: 10px;
     font-size: 0.9em;
     transition: opacity 0.5s, color 0.3s;
+    visibility: hidden;
+  }
+
+  .navbar-brand.show {
+    visibility: visible;
   }
 
   #navbar-items {
@@ -115,7 +124,7 @@ body {
 
   #header #learn_more:hover {
     transition: .5s;
-    font-size: 1em;
+    transform: translate(0, 5px);
   }
 
   #header i {
@@ -201,11 +210,61 @@ body {
     background-color: rgba(0, 0, 0, 0.15);
   }
 
+  @media (max-width: 980px) {
+
+    .project {
+      display: block;
+    }
+
+      .project .image {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .project .text {
+        padding: 4em 3em 2em 3em ;
+        max-width: none;
+        text-align: center;
+        width: 100%;
+      }
+
+  }
+
 
 #gap {
+  display: flex;
   background-color: rgba(38, 51, 51, 0.35);
-  padding: 2em;
+  padding: 5% 20%;
 }
+
+  #gap .gap-text {
+    padding: 0 30px 0 0;
+  }
+
+  #gap .gap-text h4 {
+    font-weight: 800;
+    line-height: 1.75em;
+  }
+
+  #gap .gap-buttons {
+    margin: auto 0;
+  }
+
+  #gap .gap-buttons a {
+    margin: 15px 0;
+    width: 200px;
+  }
+
+  .btn-to-top {
+    border-color: white;
+    border-width: 2px;
+    color: white;
+  }
+
+  #gap a:hover {
+    color: white;
+    opacity: 0.7;
+  }
 
 #footer {
   padding: 7% 0 5% 0;
