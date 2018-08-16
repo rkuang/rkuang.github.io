@@ -15,12 +15,14 @@ $(function() {
         var position = document.getElementById("about").offsetTop - 51;
 
         if ($(this).scrollTop() >= position) {
-            console.log("background black")
-            $('nav').addClass('changeColor')
+            console.log("background black");
+            $('nav').addClass('changeColor');
+            $('nav>.navbar-brand').addClass('show');
         }
         if ($(this).scrollTop() < position) {
-            console.log("background transparent")
-            $('nav').removeClass('changeColor')
+            console.log("background transparent");
+            $('nav').removeClass('changeColor');
+            $('nav>.navbar-brand').removeClass('show');
         }
     });
 
