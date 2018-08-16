@@ -3,6 +3,11 @@ html, body {
   background-color: #1d242a;
 }
 
+h4 {
+  font-weight: 800;
+  line-height: 1.50em;
+}
+
 p {
   text-transform: none;
 }
@@ -37,12 +42,14 @@ body {
   .navbar-brand {
     margin-left: 10px;
     font-size: 0.9em;
-    transition: opacity 0.5s, color 0.3s;
+    transition: opacity 0.5s, visibility 0.5s, color 0.3s;
     visibility: hidden;
+    opacity: 0;
   }
 
   .navbar-brand.show {
     visibility: visible;
+    opacity: 1;
   }
 
   #navbar-items {
@@ -97,6 +104,7 @@ body {
     }
 
     #header .header-inner p {
+      text-transform: uppercase;
       margin-bottom: 1.8em;
       line-height: 2;
     }
@@ -167,7 +175,6 @@ body {
 
     #about .summary p {
       color: rgba(255, 255, 255, 0.90);
-      text-transform: none;
       line-height: 1.8em;
       margin-bottom: 0;
     }
@@ -177,12 +184,10 @@ body {
 }
 
   .project {
+    padding: 0 10%;
+    width: 100%;
     display: flex;
     align-items: center;
-  }
-
-  .project {
-    width: 100%;
   }
 
     .project .image {
@@ -194,7 +199,7 @@ body {
     }
 
     .project .text {
-      padding: 2em;
+      padding: 0 100px;
       width: 60%;
     }
 
@@ -233,38 +238,38 @@ body {
 
 #gap {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: rgba(38, 51, 51, 0.35);
   padding: 5% 20%;
 }
 
   #gap .gap-text {
-    padding: 0 30px 0 0;
-  }
-
-  #gap .gap-text h4 {
-    font-weight: 800;
-    line-height: 1.75em;
+    padding-right: 50px;
+    display: block;
+    flex-grow: 2;
   }
 
   #gap .gap-buttons {
-    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
-  #gap .gap-buttons a {
-    margin: 15px 0;
-    width: 200px;
-  }
+    #gap .gap-buttons a {
+      width: 200px;
+    }
 
-  .btn-to-top {
-    border-color: white;
-    border-width: 2px;
-    color: white;
-  }
+    .btn-to-top {
+      border-color: white;
+      border-width: 2px;
+      color: white;
+    }
 
-  #gap a:hover {
-    color: white;
-    opacity: 0.7;
-  }
+    #gap a:hover {
+      color: white;
+      opacity: 0.7;
+    }
 
 #footer {
   padding: 7% 0 5% 0;
