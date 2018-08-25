@@ -16,12 +16,12 @@ $(function() {
 
         if ($(this).scrollTop() >= position) {
             console.log("background black");
-            $('nav').addClass('changeColor');
+            $('nav').addClass('bg-dark');
             $('nav>.navbar-brand').addClass('show');
         }
         if ($(this).scrollTop() < position) {
             console.log("background transparent");
-            $('nav').removeClass('changeColor');
+            $('nav').removeClass('bg-dark');
             $('nav>.navbar-brand').removeClass('show');
         }
     });

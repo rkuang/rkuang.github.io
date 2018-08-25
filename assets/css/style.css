@@ -1,15 +1,31 @@
 html, body {
   font-family: 'Open Sans', sans-serif;
   background-color: #1d242a;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: white;
+  line-height: 1.50em;
 }
 
-h2, h3, h4 {
+h1, h2, h3, h4 {
   font-weight: 800;
-  line-height: 1.50em;
+  margin-bottom: 20px;
 }
 
 p {
   text-transform: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  transition: transform .3s;
+  transform: translate(0, -1px);
+  text-decoration: none;
+  opacity: 0.7;
 }
 
 body {
@@ -18,13 +34,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  color: white;
+
+  /* Loading animation */
   transition-property: opacity;
   transition-delay: 1s;
-  transition-duration: 3s;
-  opacity: 0;
+  transition-duration: 2s;
+  opacity: 1;
 }
 
 .load {
@@ -32,6 +47,7 @@ body {
 }
 
 .navbar {
+  transition: background-color 0.5s;
   width: 100%;
   position: fixed;
   padding: 10px!important;
@@ -39,10 +55,15 @@ body {
   z-index: 1;
 }
 
+  .bg-dark {
+    background-color: #1d242a!important
+  }
+
   .navbar-brand {
+    transition: opacity 0.5s, visibility 0.5s, color 0.3s;
     margin-left: 10px;
     font-size: 0.9em;
-    transition: opacity 0.5s, visibility 0.5s, color 0.3s;
+    color: rgba(255, 255, 255, 0.5);
     visibility: hidden;
     opacity: 0;
   }
@@ -52,28 +73,26 @@ body {
     opacity: 1;
   }
 
+  .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
   #navbar-items {
     margin-left: 15px;
     font-size: 0.7em;
   }
 
-  .navbar-dark .navbar-nav .nav-link {
-    transition: color 0.3s;
-  }
+    .nav-item {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .nav-item:hover {
+      opacity: 1;
+      color: rgba(255, 255, 255, 0.85);
+    }
 
-  .bg-dark {
-    background-color: #1d242a!important
-  }
-
-  .navbar-dark .navbar-brand {
+  .navbar-toggler {
     color: rgba(255, 255, 255, 0.5);
-  }
-
-  .navbar-dark .navbar-brand:hover {
-    color: rgba(255, 255, 255, 0.85);
-  }
-
-  .navbar-dark .navbar-toggler {
     border: none;
   }
 
@@ -92,29 +111,28 @@ body {
   }
 
     #header .header-inner h1 {
-      font-weight: 800;
+      display: inline-block;
       font-size: 1.5em;
       letter-spacing: 0.5em;
-      display: inline-block;
-      border: 2px;
+      margin-bottom: 30px;
+
+      /* Border */
       border-style: solid none solid none;
+      border-width: 2px;
       padding: 20px;
       padding-left: 35px;
-      margin-bottom: 28px
     }
 
     #header .header-inner p {
       text-transform: uppercase;
-      margin-bottom: 1.8em;
-      line-height: 2;
+      margin-bottom: 50px;
+      line-height: 2em;
     }
 
     #header .header-inner .btn {
       padding: 8px 30px;
-      text-transform: uppercase;
       font-size: 0.9em;
-      letter-spacing: 0.225em;
-      background-color: rgb(255, 61, 61);
+      letter-spacing: 0.4em;
       margin-bottom: 4.2em;
     }
 
@@ -127,56 +145,63 @@ body {
     font-size: 0.85em;
     line-height: 2.5em;
     color: white!important;
-    text-decoration: none!important;
+    /* text-decoration: none!important; */
   }
 
   #header #learn_more:hover {
-    transition: .5s;
+    transition: transform .5s;
     transform: translate(0, 5px);
   }
 
   #header i {
     font-size: 2em;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: inherit;
+  align-content: inherit;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+  @media (max-width: 1200px) {
+    .content-wrapper {
+      width: 100%;
+    }
   }
 
 #about {
-  display: flex;
-  flex-direction: column;
-  background-color: #505393;
-  padding: 5%;
+  padding: 50px 0;
   width: 100%;
-  font-size: .8em;
+  background-color: #505393;
+  align-items: center;
+  align-content: normal;
 }
 
-  #about .avatar {
-    border-style: none none solid none;
+  .about-avatar {
+    width: 30%;
+    padding: 5%;
+    border-style: none solid none none;
     border-width: 2px;
     border-color: rgba(0,0,0, .125);
-    padding-bottom: 5%;
   }
 
-    #about .avatar img {
-      display: block;
-      width: 200px;
+    .about-avatar img {
+      width: 100%;
       margin: 0 auto;
       border-radius: 50%;
     }
 
-  #about .summary {
-    padding: 2.5%;
+  .about-summary {
+    width: 75%;
+    padding: 5%;
   }
 
-    #about .summary h2 {
-      font-size: 1.60em;
-      font-weight: 800;
-      line-height: 2.2em;
-      text-align: center;
-    }
-
-    #about .summary p {
+    .about-summary p {
       color: rgba(255, 255, 255, 0.90);
-      line-height: 1.8em;
-      margin-bottom: 0;
     }
 
 #projects {
@@ -237,36 +262,34 @@ body {
 
 
 #thankyou {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  padding: 50px 0;
   background-color: rgba(38, 51, 51, 0.35);
-  padding: 5% 20%;
+  align-content: center;
+  align-items: normal;
 }
 
-  #thankyou .thankyou-text {
-    padding-right: 50px;
-    display: block;
-    flex-grow: 2;
+  .thankyou-text {
+    width: 800px;
   }
 
-  #thankyou .thankyou-buttons {
+  .thankyou-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
-    #thankyou .thankyou-buttons a {
+    .thankyou-buttons a {
       width: 200px;
     }
 
-    .btn-to-top {
+    .thankyou-buttons .btn-to-top {
       border-color: white;
       border-width: 2px;
       color: white;
     }
 
-    #thankyou a:hover {
+    .thankyou-buttons a:hover {
       color: white;
       opacity: 0.7;
     }
@@ -312,13 +335,11 @@ body {
 
     #footer .icons a {
       color: rgba(255, 255, 255, 0.5);
-      transition: .7s color, .7s font-size;
     }
 
-      #footer .icons a:hover {
-        color: white;
-        font-size: 1.05em;
-      }
+    #footer .icons a:hover {
+      color: white;
+    }
 
 .icons {
   padding-left: 0px;
@@ -336,7 +357,7 @@ body {
       text-decoration: none;
     }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
   #about {
     font-size: .9em;
   }
@@ -357,10 +378,6 @@ body {
 
   #about {
     font-size: 1em;
-  }
-
-  .changeColor {
-    background-color: #1d242a!important;
   }
 }
 
@@ -394,4 +411,4 @@ body {
       #about .summary p {
         text-transform: none;
       }
-}
+} */
