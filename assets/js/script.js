@@ -1,9 +1,13 @@
+let navbar_height = 50;
+
 $(function() {
+
+    // Smooth scrolling animation
     $("a[href^='#']").click(function(e) {
         console.log("# clicked");
         e.preventDefault();
 
-        var position = $($(this).attr("href")).offset().top-51;
+        var position = $($(this).attr("href")).offset().top-navbar_height;
     
         $("body, html").animate({
             scrollTop: position
@@ -11,8 +15,9 @@ $(function() {
     });
 
 
+    // change navbar color
     $(window).scroll(function () {
-        var position = document.getElementById("about").offsetTop - 51;
+        var position = document.getElementById("about").offsetTop - navbar_height;
 
         if ($(this).scrollTop() >= position) {
             console.log("background black");
@@ -26,10 +31,14 @@ $(function() {
         }
     });
 
+
+    // Hide navbar when item is clicked
     $('nav>.navbar-collapse>.navbar-nav>.nav-item').on('click', function(){
         console.log("nav item clicked");
         $('.navbar-collapse').collapse('hide');
     });
 
+
+    // Load in animation
     $('body').addClass("load");
 });
