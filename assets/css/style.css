@@ -111,16 +111,15 @@ body {
   height: 100vh;
   text-align: center;
   align-items: center;
-  justify-content: space-evenly;
   background-color: rgba(38, 51, 51, 0.35);
 }
 
   .header-text {
-    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-grow: 2;
   }
 
     .header-text h1 {
@@ -148,21 +147,22 @@ body {
       letter-spacing: 0.4em;
     }
 
-  #header #learn_more {
-    margin-top:
+  .learn_more {
+    /* bottom: 10%; */
+    margin-bottom: 60px;
     text-align: center;
     font-size: 0.85em;
     line-height: 2.5em;
   }
 
-  #header #learn_more:hover {
-    transition: transform .5s;
-    transform: translate(0, 5px);
-  }
+    .learn_more:hover {
+      transition: transform .5s;
+      transform: translate(0, 5px);
+    }
 
-  #header i {
-    font-size: 2em;
-}
+    .learn_more i {
+      font-size: 2em;
+    }
 
 .content-wrapper {
   display: flex;
