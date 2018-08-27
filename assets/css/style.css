@@ -9,6 +9,7 @@ html, body {
 
 h1, h2, h3, h4 {
   font-weight: 800;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
@@ -123,7 +124,6 @@ body {
   }
 
     .header-text h1 {
-      font-size: 1.5em;
       letter-spacing: 0.5em;
 
       /* Border */
@@ -166,11 +166,12 @@ body {
 
 .content-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: inherit;
   justify-content: center;
   align-items: inherit;
   align-content: inherit;
   width: 1200px;
+  padding: 0 auto;
   margin: 0 auto;
 }
 
@@ -212,13 +213,14 @@ body {
     }
 
 #projects {
+  display: none;
   background-color: #2e3842;
+  flex-direction: column;
 }
 
   .project {
-    padding: 0 10%;
-    width: 100%;
     display: flex;
+    width: 100%;
     align-items: center;
   }
 
@@ -231,21 +233,21 @@ body {
     }
 
     .project .text {
-      padding: 0 100px;
       width: 60%;
+      padding: 50px;
     }
 
   .project:nth-child(2n) {
     flex-direction: row-reverse;
   }
 
-  .project:nth-child(1) {
+  /* .project:nth-child(1) {
     background-color: rgba(0, 0, 0, 0.075);
   }
 
   .project:nth-child(2) {
     background-color: rgba(0, 0, 0, 0.15);
-  }
+  } */
 
   @media (max-width: 980px) {
 
@@ -324,10 +326,6 @@ body {
   }
 
   @media (max-width: 600px) {
-    /* .thankyou-text {
-      text-align: start;
-    } */
-
     .thankyou-buttons {
       height: 92px;
       flex-direction: column;
