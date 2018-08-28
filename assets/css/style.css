@@ -41,7 +41,7 @@ body {
   transition-property: opacity;
   transition-delay: 1s;
   transition-duration: 2s;
-  opacity: 1;
+  opacity: 0;
 }
 
 .load {
