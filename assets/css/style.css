@@ -21,10 +21,10 @@ p {
 a {
   text-decoration: none;
   color: white;
+  transition: transform .3s, color 0.2s;
 }
 
 a:hover {
-  transition: transform .3s;
   transform: translate(0, -1px);
   text-decoration: none;
   color: white;
@@ -245,7 +245,7 @@ body {
   align-items: center;
   
   background-color: #2e3842;
-  padding: 40px;
+  padding: 40px 0;
 }
 
 #projects h2 {
@@ -260,6 +260,7 @@ body {
 
 #projects .content-wrapper {
   width: 900px;
+  padding: 0 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -269,7 +270,7 @@ body {
 }
 
 #projects a {
-  width: 445px;
+  width: 49.5%;
   margin-bottom: 10px;
   z-index: 1;
   transition: transform 0.2s ease-in-out;
@@ -285,9 +286,32 @@ body {
   width: 100%;
 }
 
-@media (max-width: 800px) {
-  #projects {
-    display: none;
+@media (max-width: 900px) {
+  #projects .content-wrapper {
+    width: 100%;
+  }
+  
+  #projects a {
+    margin-bottom: 1%;
+  }
+
+  #projects a:hover {
+    transform: scale(1.1)
+  }
+}
+
+@media (max-width: 600px) {
+  #projects .content-wrapper {
+    padding: 0 10px;
+    justify-content: center;
+  }
+
+  #projects a {
+    width: 90%;
+  }
+
+  #projects a:hover {
+    transform: scale(1.1)
   }
 }
 
