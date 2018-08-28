@@ -53,6 +53,7 @@ body {
   width: 100%;
   position: fixed;
   padding: 5px!important;
+  height: 50px!important;
 
   font-weight: 800;
   z-index: 1;
@@ -171,7 +172,6 @@ body {
   align-items: inherit;
   align-content: inherit;
   width: 1200px;
-  padding: 0 auto;
   margin: 0 auto;
 }
 
@@ -182,7 +182,8 @@ body {
   }
 
 #about {
-  padding: 50px 0;
+  display: flex;
+  padding: 40px 0;
   width: 100%;
   background-color: #505393;
   justify-content: center;
@@ -213,7 +214,31 @@ body {
       color: rgba(255, 255, 255, 0.90);
     }
 
+  @media (max-width: 980px) {
+    #about {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #about .about-avatar {
+      width: 80%;
+      border-style: none none solid none;
+      padding: 20px 10%;
+    }
+
+    #about .about-avatar img {
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    #about .about-summary {
+      width: 100%;
+      padding: 20px 5%;
+    }
+  }
+
 #projects {
+  display: flex;
   background-color: #2e3842;
   flex-direction: column;
 }
@@ -271,22 +296,24 @@ body {
 
 
 #thankyou {
+  display: flex;
   width: 100%;
-  padding: 50px;
   background-color: rgba(38, 51, 51, 0.35);
   justify-content: space-around;
   align-content: center;
   align-items: normal;
+  padding: 50px;
 }
 
   .thankyou-text {
-    margin-right: 5%;
+    margin-right: 50px;
+    flex-shrink: 2;
   }
 
   .thankyou-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
     .thankyou-buttons a {
@@ -294,8 +321,8 @@ body {
     }
 
     .thankyou-buttons .btn-to-top {
-      border-color: white;
       border-width: 2px;
+      border-color: white;
       color: white;
     }
 
@@ -309,13 +336,14 @@ body {
       padding: 50px 20px;
     }
 
-    #thankyou .content-wrapper {
+    #thankyou {
       flex-direction: column;
       align-items: center;
     }
 
       .thankyou-text {
         width: 100%;
+        margin-right: 0;
         text-align: center;
       }
 
@@ -342,7 +370,7 @@ body {
   justify-content: space-between;
   
   height: 100px;
-  padding: 25px;
+  padding: 50px;
   background-color: rgba(38, 51, 51, 0.85);
   color: rgba(255, 255, 255, 0.5);
 }
@@ -364,7 +392,14 @@ body {
     }
 
   #footer p {
+    text-align: end;
+    line-height: 1.5em;
     margin-bottom: 0;
+  }
+
+  #footer p.design {
+    letter-spacing: 0.3em;
+    font-size: 0.2em;
   }
 
   @media (max-width: 768px) {
@@ -376,6 +411,10 @@ body {
 
     #footer .icons {
       margin-bottom: 30px;
+    }
+
+    #footer p {
+      text-align: center;
     }
   }
 
