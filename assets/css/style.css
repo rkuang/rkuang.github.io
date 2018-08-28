@@ -5,6 +5,7 @@ html, body {
   letter-spacing: 0.25em;
   color: white;
   line-height: 1.50em;
+  transition-timing-function: ease-in;
 }
 
 h1, h2, h3, h4 {
@@ -154,10 +155,11 @@ body {
     text-align: center;
     font-size: 0.85em;
     line-height: 2.5em;
+
+    transition: transform .5s;
   }
 
     .learn_more:hover {
-      transition: transform .5s;
       transform: translate(0, 5px);
     }
 
@@ -250,6 +252,12 @@ body {
   padding: 20px 0;
 }
 
+#projects h2::before, #projects h2::after {
+  width: 10px;
+  height: 2px;
+  background-color: white;
+}
+
 #projects .content-wrapper {
   width: 900px;
   display: flex;
@@ -263,11 +271,14 @@ body {
 #projects a {
   width: 445px;
   margin-bottom: 10px;
+  z-index: 1;
+  transition: transform 0.2s ease-in-out;
 }
 
 #projects a:hover {
   opacity: 1;
-  transform: scale(1.25)
+  z-index: 2;
+  transform: scale(1.2)
 }
 
 #projects a img {
