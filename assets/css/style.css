@@ -243,7 +243,7 @@ body {
   align-items: center;
   
   background-color: #2e3842;
-  padding: 40px;
+  padding: 40px 0;
 }
 
 #projects h2 {
@@ -274,7 +274,7 @@ body {
   width: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   #projects {
     display: none;
   }
