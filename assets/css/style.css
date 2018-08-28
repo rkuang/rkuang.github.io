@@ -238,7 +238,7 @@ body {
   }
 
 #projects {
-  display: flex;
+  display: none;
   background-color: #2e3842;
   flex-direction: column;
 }
