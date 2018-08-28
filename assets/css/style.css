@@ -238,61 +238,47 @@ body {
   }
 
 #projects {
-  display: none;
-  background-color: #2e3842;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  
+  background-color: #2e3842;
+  padding: 40px;
 }
 
-  .project {
-    display: flex;
-    width: 100%;
-    align-items: center;
+#projects h2 {
+  padding: 20px 0;
+}
+
+#projects .content-wrapper {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+#projects a {
+  width: 445px;
+  margin-bottom: 10px;
+}
+
+#projects a:hover {
+  opacity: 1;
+  transform: scale(1.25)
+}
+
+#projects a img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  #projects {
+    display: none;
   }
-
-    .project .image {
-      width: 40%;
-    }
-
-    .project .image img {
-      width: 100%;
-    }
-
-    .project .text {
-      width: 60%;
-      padding: 50px;
-    }
-
-  .project:nth-child(2n) {
-    flex-direction: row-reverse;
-  }
-
-  .project:nth-child(1) {
-    background-color: rgba(0, 0, 0, 0.075);
-  }
-
-  .project:nth-child(2) {
-    background-color: rgba(0, 0, 0, 0.15);
-  }
-
-  @media (max-width: 980px) {
-
-    .project {
-      display: block;
-    }
-
-      .project .image {
-        width: 100%;
-        margin: 0 auto;
-      }
-
-      .project .text {
-        padding: 4em 3em 2em 3em ;
-        max-width: none;
-        text-align: center;
-        width: 100%;
-      }
-
-  }
+}
 
 
 #thankyou {
@@ -417,59 +403,3 @@ body {
       text-align: center;
     }
   }
-
-/* @media (min-width: 500px) {
-  #about {
-    font-size: .9em;
-  }
-}
-
-@media (min-width: 768px) {
-  nav {
-    transition: 0.7s all;
-  }
-
-  .bg-dark {
-    background-color: transparent!important;
-  }
-  
-  #header .header-inner h1 {
-    font-size: 2em;
-  }
-
-  #about {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 1280px) {
-  #about {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 3% 8%;
-  }
-  
-    #about .avatar {
-      border-style: none solid none none;
-      padding: 5%;
-      margin: auto 0;
-    }
-  
-      #about .avatar img {
-        width: 250px;
-      }
-  
-    #about .summary {
-      display: block;
-      padding: 5%;
-      margin: auto 0;
-    }
-  
-      #about .summary h2 {
-        text-align: left;
-      }
-  
-      #about .summary p {
-        text-transform: none;
-      }
-} */
