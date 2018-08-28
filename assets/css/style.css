@@ -272,13 +272,13 @@ body {
 #projects a {
   width: 49.5%;
   margin-bottom: 10px;
-  z-index: 1;
+  /* z-index: 1; */
   transition: transform 0.2s ease-in-out;
 }
 
 #projects a:hover {
   opacity: 1;
-  z-index: 2;
+  /* z-index: 2; */
   transform: scale(1.2)
 }
 
