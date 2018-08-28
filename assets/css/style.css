@@ -274,13 +274,13 @@ body {
   width: 100%;
   padding: 50px;
   background-color: rgba(38, 51, 51, 0.35);
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   align-items: normal;
 }
 
   .thankyou-text {
-    width: 800px;
+    margin-right: 5%;
   }
 
   .thankyou-buttons {
@@ -315,8 +315,8 @@ body {
     }
 
       .thankyou-text {
-        text-align: center;
         width: 100%;
+        text-align: center;
       }
 
       .thankyou-buttons {
