@@ -54,7 +54,6 @@ body {
   width: 100%;
   position: fixed;
   padding: 5px!important;
-  height: 50px!important;
 
   font-weight: 800;
   z-index: 2;
@@ -71,6 +70,7 @@ body {
     color: rgba(255, 255, 255, 0.5);
     visibility: hidden;
     opacity: 0;
+    padding: 8px 0;
   }
 
   .navbar-brand.show {

@@ -22,18 +22,18 @@ $(function() {
         if ($(this).scrollTop() >= position) {
             console.log("background black");
             $('nav').addClass('bg-dark');
-            $('nav>.navbar-brand').addClass('show');
+            $('.navbar-brand').addClass('show');
         }
         if ($(this).scrollTop() < position) {
             console.log("background transparent");
             $('nav').removeClass('bg-dark');
-            $('nav>.navbar-brand').removeClass('show');
+            $('.navbar-brand').removeClass('show');
         }
     });
 
 
     // Hide navbar when item is clicked
-    $('nav>.navbar-collapse>.navbar-nav>.nav-item').on('click', function(){
+    $('.nav-item, .navbar-brand').on('click', function(){
         console.log("nav item clicked");
         $('.navbar-collapse').collapse('hide');
     });
