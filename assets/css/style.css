@@ -50,6 +50,7 @@ body {
 }
 
 .navbar {
+  opacity: 0.95;
   transition: background-color 0.5s;
   width: 100%;
   position: fixed;
@@ -67,7 +68,7 @@ body {
     transition: opacity 0.5s, visibility 0.5s, color 0.3s;
     margin-left: 10px;
     font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     visibility: hidden;
     opacity: 0;
     padding: 8px 0;
@@ -88,7 +89,7 @@ body {
   }
 
     .nav-item {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.6);
     }
     
     .nav-item:hover {
@@ -97,7 +98,7 @@ body {
     }
 
   .navbar-toggler {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     border: none;
   }
 
@@ -187,7 +188,7 @@ body {
   display: flex;
   padding: 40px 0;
   width: 100%;
-  background-color: #505393;
+  background-color: #354981;
   justify-content: center;
   align-items: center;
   align-content: normal;
@@ -434,10 +435,14 @@ body {
   align-items: center;
   justify-content: space-between;
   
-  height: 125px;
-  padding: 50px;
+  /* height: 125px; */
+  padding: 40px 0 60px 0;
   background-color: rgba(38, 51, 51, 0.85);
   color: rgba(255, 255, 255, 0.75);
+}
+
+#footer .content-wrapper {
+  padding: 0 80px;
 }
 
   #footer .icons {
