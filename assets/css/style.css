@@ -261,7 +261,7 @@ body {
 #projects h2 {
   text-align: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0 10px 0;
 }
 
 #projects h2::before, #projects h2::after {
@@ -272,6 +272,13 @@ body {
   margin: 0 16px;
   height: 2px;
   background-color: white;
+}
+
+#projects .categories {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0 20px 0;
+  margin: 0 0 16px 0;
 }
 
 #projects .project {
