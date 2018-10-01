@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126802391-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126802391-1');
+    </script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -76,11 +86,10 @@
       <div class="content-wrapper">
         <h2>My Projects</h2>
         <div class="categories">
-          <button>Show All</button>
-          <button>Android</button>
-          <button>iOS</button>
-          <button>Web Dev</button>
-          <button>Data Science</button>
+          <button class="btn">Android</button>
+          <button class="btn">iOS</button>
+          <button class="btn">Web Dev</button>
+          <button class="btn">Data Science</button>
         </div>
         <div class="project">
           <img src="images/pic01.jpg" />
