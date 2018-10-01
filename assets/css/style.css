@@ -281,6 +281,21 @@ body {
   margin: 0 0 16px 0;
 }
 
+#projects .categories .btn {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.05em;
+
+  background: none;
+  color: white;
+  letter-spacing: 0.10em;
+  opacity: 0.90;
+
+  border-width: 2px;
+  border-color: white;
+  padding: 5px 10px;
+}
+
 #projects .project {
   position: relative;
   width: 49%;
