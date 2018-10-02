@@ -85,13 +85,13 @@
     <div id="projects">
       <div class="content-wrapper">
         <h2>My Projects</h2>
-        <div class="categories">
-          <button class="btn">Android</button>
-          <button class="btn">iOS</button>
-          <button class="btn">Web Dev</button>
-          <button class="btn">Data Science</button>
+        <div class="filters">
+          <button class="btn btn-filter" onclick="filterButtonEvent('android')">Android</button>
+          <button class="btn btn-filter" onclick="filterButtonEvent('ios')">iOS</button>
+          <button class="btn btn-filter" onclick="filterButtonEvent('web')">Web Dev</button>
+          <button class="btn btn-filter" onclick="filterButtonEvent('data')">Data Science</button>
         </div>
-        <div class="project">
+        <div class="project android">
           <img src="images/pic01.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/Homies">
             <div class="project-text">
@@ -100,7 +100,7 @@
             </div>
           </a>
         </div>
-        <div class="project">
+        <div class="project web">
           <img src="images/pic02.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/Mosaic">
             <div class="project-text">
@@ -109,7 +109,7 @@
             </div>
           </a>
         </div>
-        <div class="project">
+        <div class="project web">
           <img src="images/pic03.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/Chronooz">
             <div class="project-text">
@@ -118,7 +118,7 @@
             </div>
           </a>
         </div>
-        <div class="project">
+        <div class="project data">
           <img src="images/pic04.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/convolutional_neural_network">
             <div class="project-text">
