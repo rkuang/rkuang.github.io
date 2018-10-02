@@ -2,7 +2,16 @@ let navbar_height = 50;
 
 $(document).ready(function() {
 
-    // Smooth scrolling animation
+    smoothScrolling();
+    initNavbarSettings();
+
+    activeFilterButtonsListener();
+
+    // Load in animation
+    $('body').addClass("load");
+});
+
+function smoothScrolling() {
     $("a[href^='#']").click(function(e) {
         // console.log("# clicked");
         e.preventDefault();
@@ -13,9 +22,10 @@ $(document).ready(function() {
             scrollTop: position
         }, 800);
     });
+}
 
-
-    // change navbar color
+function initNavbarSettings() {
+    // Change navbar color when scrolling past landing page
     $(window).scroll(function () {
         var position = document.getElementById("about").offsetTop - navbar_height;
 
@@ -31,14 +41,26 @@ $(document).ready(function() {
         }
     });
 
-
     // Hide navbar drawer when item is clicked
     $('.nav-item, .navbar-brand').on('click', function(){
         // console.log("nav item clicked");
         $('.navbar-collapse').collapse('hide');
     });
+}
 
+function activeFilterButtonsListener() {
+    $(".btn-filter").click(function() {
+        console.log($(this).text());
+        $(".btn-filter").removeClass('active');
+        $(this).addClass('active');
+    })
+}
 
-    // Load in animation
-    $('body').addClass("load");
-});
+function filterButtonEvent(projectType) {
+    // $("project").each(function() {
+    //     console.log(this);
+    // });
+    $("."+projectType).each(function() {
+        
+    })
+}
