@@ -246,6 +246,7 @@ body {
   align-items: center;
   
   background-color: #2e3842;
+  min-height: 501px;
   padding: 40px 0;
 }
 
@@ -261,7 +262,7 @@ body {
 #projects h2 {
   text-align: center;
   width: 100%;
-  padding: 15px 0 10px 0;
+  padding: 15px 0;
 }
 
 #projects h2::before, #projects h2::after {
@@ -274,33 +275,38 @@ body {
   background-color: white;
 }
 
-#projects .categories {
+#projects .filters {
   width: 100%;
   text-align: center;
-  padding: 5px 0 20px 0;
+  padding-bottom: 20px;
   margin: 0 0 16px 0;
 }
 
-#projects .categories .btn {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  font-size: 1.05em;
-
+#projects .filters .btn-filter {
   background: none;
   color: white;
   letter-spacing: 0.10em;
-  opacity: 0.90;
+  opacity: 0.75;
 
   border-width: 2px;
   border-color: white;
-  padding: 5px 10px;
+}
+
+#projects .filters .btn:hover,
+#projects .filters .btn.active {
+  opacity: 1;
 }
 
 #projects .project {
+  display: none;
   position: relative;
   width: 49%;
   margin-bottom: 15px;
   transition: transform 0.2s ease-in-out;
+}
+
+#projects .project.show {
+  display: block;
 }
 
 #projects .project:hover {

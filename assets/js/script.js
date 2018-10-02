@@ -50,7 +50,6 @@ function initNavbarSettings() {
 
 function activeFilterButtonsListener() {
     $(".btn-filter").click(function() {
-        console.log($(this).text());
         $(".btn-filter").removeClass('active');
         $(this).addClass('active');
     })
@@ -60,7 +59,11 @@ function filterButtonEvent(projectType) {
     // $("project").each(function() {
     //     console.log(this);
     // });
-    $("."+projectType).each(function() {
-        
-    })
+    if (projectType ==="all") {
+        $(".project").addClass("show");
+        return;
+    }
+
+    $(".project:not(."+projectType+")").removeClass("show");
+    $("."+projectType).addClass("show");
 }
