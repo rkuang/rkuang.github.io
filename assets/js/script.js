@@ -56,14 +56,11 @@ function activeFilterButtonsListener() {
 }
 
 function filterButtonEvent(projectType) {
-    // $("project").each(function() {
-    //     console.log(this);
-    // });
     if (projectType ==="all") {
-        $(".project").addClass("show");
+        $(".project").slideDown();
         return;
     }
-
-    $(".project:not(."+projectType+")").removeClass("show");
-    $("."+projectType).addClass("show");
+    
+    $(".project:not(."+projectType+")").slideUp();
+    $("."+projectType).slideDown();
 }
