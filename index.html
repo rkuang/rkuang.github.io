@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126802391-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126802391-1');
+    </script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -73,9 +83,16 @@
     </div>
 
     <div id="projects">
-      <h2>My Projects</h2>
       <div class="content-wrapper">
-        <div class="project">
+        <h2>My Projects</h2>
+        <div class="filters">
+          <a href="#projects" class="btn btn-filter active" onclick="filterButtonEvent('all')">Show All</a>
+          <a href="#projects" class="btn btn-filter" onclick="filterButtonEvent('android')">Android</a>
+          <a href="#projects" class="btn btn-filter" onclick="filterButtonEvent('ios')">iOS</a>
+          <a href="#projects" class="btn btn-filter" onclick="filterButtonEvent('web')">Web Dev</a>
+          <a href="#projects" class="btn btn-filter" onclick="filterButtonEvent('data')">Data Science</a>
+        </div>
+        <div class="project android show">
           <img src="images/pic01.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/Homies">
             <div class="project-text">
@@ -84,7 +101,7 @@
             </div>
           </a>
         </div>
-        <div class="project">
+        <div class="project web show">
           <img src="images/pic02.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/Mosaic">
             <div class="project-text">
@@ -93,7 +110,7 @@
             </div>
           </a>
         </div>
-        <div class="project">
+        <div class="project web show">
           <img src="images/pic03.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/Chronooz">
             <div class="project-text">
@@ -102,7 +119,7 @@
             </div>
           </a>
         </div>
-        <div class="project">
+        <div class="project data show">
           <img src="images/pic04.jpg" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/convolutional_neural_network">
             <div class="project-text">
@@ -141,7 +158,7 @@
         <div class="icons">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rkuang/" class="fab fa-github"></a>
           <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ricky-kuang/" class="fab fa-linkedin"></a>
-          <a target="_blank" rel="noopener noreferrer" href="mailto:rkuang26@gmail.com" class="fas fa-envelope"></a>
+          <a rel="noopener noreferrer" href="mailto:rkuang26@gmail.com" class="fas fa-envelope"></a>
         </div>
         <div class="text">
           <p>&copy; 2018 Ricky Kuang</p>

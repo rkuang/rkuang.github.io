@@ -50,11 +50,11 @@ body {
 }
 
 .navbar {
+  opacity: 0.95;
   transition: background-color 0.5s;
   width: 100%;
   position: fixed;
   padding: 5px!important;
-  height: 50px!important;
 
   font-weight: 800;
   z-index: 2;
@@ -68,9 +68,10 @@ body {
     transition: opacity 0.5s, visibility 0.5s, color 0.3s;
     margin-left: 10px;
     font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     visibility: hidden;
     opacity: 0;
+    padding: 8px 0;
   }
 
   .navbar-brand.show {
@@ -88,7 +89,7 @@ body {
   }
 
     .nav-item {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.6);
     }
     
     .nav-item:hover {
@@ -97,7 +98,7 @@ body {
     }
 
   .navbar-toggler {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     border: none;
   }
 
@@ -187,7 +188,7 @@ body {
   display: flex;
   padding: 40px 0;
   width: 100%;
-  background-color: #505393;
+  background-color: #354981;
   justify-content: center;
   align-items: center;
   align-content: normal;
@@ -242,10 +243,13 @@ body {
 #projects {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   
   background-color: #2e3842;
+  min-height: 501px;
   padding: 40px 0;
+
+  transition: height 0.2s;
 }
 
 #projects .content-wrapper {
@@ -260,17 +264,47 @@ body {
 #projects h2 {
   text-align: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 #projects h2::before, #projects h2::after {
   vertical-align: middle;
   display: inline-block;
   content: "";
-  width: 25%;
+  width: 40px;
   margin: 0 16px;
   height: 2px;
   background-color: white;
+}
+
+#projects .filters {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 0 0 16px 0;
+
+  cursor: default;
+}
+
+#projects .filters .btn-filter {
+  background: none;
+  color: white;
+  letter-spacing: 0.10em;
+  opacity: 0.70;
+
+  border-width: 2px;
+  border-color: white;
+  transition: opacity 0.2s;
+
+  text-transform: none;
+}
+
+#projects .filters .btn:hover {
+  opacity: 0.8;
+}
+
+#projects .filters .btn.active {
+  opacity: 1;
 }
 
 #projects .project {
@@ -281,12 +315,11 @@ body {
 }
 
 #projects .project:hover {
-  opacity: 1;
   z-index: 1;
   transform: scale(1.1)
 }
 
-#projects a:hover {
+#projects .project a:hover {
   opacity: 1;
 }
 
@@ -354,10 +387,6 @@ body {
     justify-content: center;
   }
 
-  #projects .project h2::before, #projects h2::after {
-    width: 10%;
-  }
-
   #projects .project {
     width: 90%;
   }
@@ -397,7 +426,7 @@ body {
 
     .thankyou-buttons a:hover {
       color: white;
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
   @media (max-width: 768px) {
@@ -438,25 +467,30 @@ body {
   align-items: center;
   justify-content: space-between;
   
-  height: 100px;
-  padding: 50px;
+  /* height: 125px; */
+  padding: 40px 0 60px 0;
   background-color: rgba(38, 51, 51, 0.85);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#footer .content-wrapper {
+  padding: 0 80px;
 }
 
   #footer .icons {
     display: flex;
-    width: 170px;
+    width: 200px;
     justify-content: space-between;
   }
 
     #footer .icons a {
-      font-size: 1.5em;
-      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.75em;
+      color: rgba(255, 255, 255, 0.75);
     }
 
     #footer .icons a:hover {
-      text-decoration: none;
+      transform: scale(1.2);
+      opacity: 1;
       color: white;
     }
 
