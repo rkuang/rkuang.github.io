@@ -295,6 +295,8 @@ body {
   border-width: 2px;
   border-color: white;
   transition: opacity 0.2s;
+
+  text-transform: none;
 }
 
 #projects .filters .btn:hover {
