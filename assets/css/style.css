@@ -373,6 +373,21 @@ body {
   font-size: 0.8em;
 }
 
+#projects .project-tools {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  text-transform: none;
+  font-size: 0.80em;
+  letter-spacing: 0.15em;
+}
+
+#projects .project-tools li {
+  display: inline;
+  margin: 0 5px 0 0;
+}
+
 #projects .project a.btn {
   /* font-size: 0.25em; */
   border-style: solid;
