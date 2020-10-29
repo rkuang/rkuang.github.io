@@ -1,0 +1,26 @@
+<div class="navbar">
+  <nav>
+    <a class="navbar-brand" href="/">
+      {% include monogram-bold-short.svg %}
+    </a>
+    <ul>
+      {% for item in site.data.navigation %}
+      <li>
+        {% if item.link == page.url %}
+          {% assign current = true %}
+        {% elsif item.link == "/blog/" %}
+          {% assign url_prefix = page.url | slice: 0, 5%}
+          {% if url_prefix == "/blog" %}
+            {% assign current = true %}
+          {% endif %}
+        {% endif %}
+        <a href="{{ item.link }}" {% if current | default: false %}class="current"{% endif %}>
+          {{ item.name }}
+        </a>
+      </li>
+      {% assign current = false %}
+      {% assign url_prefix = "" %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

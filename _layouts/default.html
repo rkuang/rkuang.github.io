@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utl-8">
+    <title>
+      {% if page.url == '/' %}
+        Ricky Kuang - Software Engineer
+      {% else %}
+        {{ page.title }} | Ricky Kuang
+      {% endif %}
+    </title>
+    <meta name="description" content="Ricky Kuang is a software engineer living in Los Angeles, CA">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Text&display=swap">
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body>
+    {% include navigation.html %}
+    <div class="content">
+      {{ content }}
+    </div>
+  </body>
+</html>
