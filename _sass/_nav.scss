@@ -1,0 +1,48 @@
+
+.navbar {
+  font-family: "DM Sans", sans-serif;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+
+  .navbar-brand {
+    width: 48px;
+    stroke: $color-primary;
+    fill: $color-primary;
+    opacity: 1 !important;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+
+    li {
+      list-style: none;
+      padding-left: 32px;
+      margin: 0;
+    }
+  }
+
+  a {
+    margin: 0;
+    color: $color-text;
+    text-decoration: none;
+    opacity: 0.8;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 0.02em;
+    transition: all .2s ease-in-out;
+
+    &.current, &:hover {
+      opacity: 1;
+      border-bottom-color: $color-tertiary;
+    }
+  }
+}
