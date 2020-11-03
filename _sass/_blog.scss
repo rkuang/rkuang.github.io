@@ -1,7 +1,7 @@
 .blog-list {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  align-content: flex-start;
 }
 
 .blog-item-header {
@@ -15,10 +15,16 @@
 
   h2 {
     font-family: "DM Serif Text", serif;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   p {
     font-size: .7rem;
   }
+}
+
+.blog-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  margin: 8px 0 4px 0;
 }

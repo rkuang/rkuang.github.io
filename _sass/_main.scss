@@ -25,7 +25,7 @@ html {
 body {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.125em;
   color: $color-text;
 }
 
@@ -33,12 +33,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 32px;
   a {
     color: $color-action;
     text-decoration: none;
     border-bottom: 1px dashed transparent;
     padding-bottom: 0.02em;
-    transition: all .2s ease-in-out;
+    transition: border-bottom-color .2s ease-in-out;
 
     &:hover {
       border-bottom-color: $color-action;
@@ -47,9 +48,30 @@ body {
 }
 
 .projects-intro {
-  font-family: "DM Serif Text", serif;
+  margin: 48px 0 128px 0;
+  font-family: "DM Serif Display", serif;
   font-weight: 400;
   color: $color-primary;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.projects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  row-gap: 32px;
+  column-gap: 32px;
+  justify-content: center;
+  .project {
+    background-color: red;
+    width: 300px;
+    height: 248px;
+  }
+}
+
+.container {
+  max-width: 1040px;
 }
