@@ -2,6 +2,7 @@
 name: KOS
 date: 2018-01-01
 short_description: An operating system that runs on a simulated MIPS machine and mimics the capabilities of Linux
+link: null
 ---
 During my Winter 2018 quarter at UC Santa Barbara, I took an Operating Systems 
 class focused on the design and implementation issues associated with OSes.
