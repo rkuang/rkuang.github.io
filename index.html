@@ -7,8 +7,8 @@ title: Home
   {% for project in site.projects reversed %}
     <div class="project">
       <p>{{ project.short_description }}</p>
-      {% if project.page %}
-        <a href="{{ project.page }}">View</a>
+      {% if project.link %}
+        <a href="{{ project.link }}">View</a>
       {% else %}
         <a>Source Code Private</a>
       {% endif %}
