@@ -1,0 +1,21 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .contact-header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3em;
+  }
+
+  .contact-form {
+    width: 600px;
+  }
+}
+
+
+label {
+  > input, > textarea {
+    width: 100%
+  }
+}
