@@ -2,24 +2,32 @@
 title: About
 ---
 
-<div class="profile">
-  {% include profile.html %}
-</div>
-
-<div class="resume">
-  <div class="card">
-    {% include experience.html %}
+<div class="about">
+  <div class="profile">
+    {% include profile.html %}
   </div>
-  <div class="card">
-    {% include experience.html %}
-  </div>
-  <div class="card">
-    {% include experience.html %}
-  </div>
-  <div class="card">
-    {% include experience.html %}
-  </div>
-  <div class="card">
-    {% include experience.html %}
+  
+  <div class="resume">
+    <div class="resume-card">
+      <h2 class="resume-card-header">Experience</h2>
+      {% include experience.html %}
+    </div>
+    
+    <div class="resume-card">
+      <h2 class="resume-card-header">Education</h2>
+      {% include education.html %}
+    </div>
+    <div class="resume-card">
+      <h2 class="resume-card-header">Programming Languages</h2>
+      
+    </div>
+    <div class="resume-card">
+      <h2 class="resume-card-header">Libraries & Frameworks</h2>
+      
+    </div>
+    <div class="resume-card">
+      <h2 class="resume-card-header">Tools & Platforms</h2>
+      
+    </div>
   </div>
 </div>

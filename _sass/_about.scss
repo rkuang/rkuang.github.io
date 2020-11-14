@@ -1,0 +1,43 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: space-between;
+  column-gap: 16px;
+  row-gap: 16px;
+  height: 600px;
+
+  .resume-card {
+    border-top: 2px solid $color-primary;
+    padding-left: 8px;
+    // width: 400px;
+    margin: 0;
+    .resume-card-header {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.75rem;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .resume-card-item {
+      margin-bottom: 16px;
+      p {
+        margin: 0;
+      }
+      .timeframe {
+        // text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+      .resume-card-item-detail {
+        color: $color-text-sunken;
+      }
+    }
+
+
+  }
+}
