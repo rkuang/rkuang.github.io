@@ -46,14 +46,25 @@
   }
 }
 
+.about-site {
+  width: 50%;
+  .about-site-header {
+    font-family: "DM Serif Display", serif;
+    font-size: 2.5rem;
+    border-top: 2px solid $color-text-sunken;
+    margin-bottom: 16px;
+  }
+}
+
 .dashed-list {
   list-style-type: none;
   li {
-    margin-bottom: 0.5rem;
+    margin-left: 16px;
     &::before {
+      position: absolute;
+      margin-left: -16px;
       content: '-';
       color: $color-text-sunken;
-      margin-right: 10px;
     }
   }
 }
