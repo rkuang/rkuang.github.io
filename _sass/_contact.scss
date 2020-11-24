@@ -9,7 +9,17 @@
   }
 
   .contact-form {
-    width: 600px;
+    width: 540px;
+
+    .contact-form-button {
+      font-size: 0.85rem;
+      color: $color-text;
+      border-color: $color-text;
+      &:hover {
+        color: $color-text-sunken;
+        border-color: $color-text-sunken;
+      }
+    }
   }
 }
 
