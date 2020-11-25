@@ -32,11 +32,15 @@
     <footer>
       &copy; Ricky Kuang
     </footer>
-    
-    <!-- 
-      Work around for Chrome CSS transition bug
-      https://stackoverflow.com/questions/14389566/stop-css-transition-from-firing-on-page-load
-    -->
-    <script> </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPLM0ZWM5V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XPLM0ZWM5V');
+    </script>
   </body>
 </html>
