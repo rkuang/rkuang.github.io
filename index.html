@@ -5,13 +5,14 @@ title: Home
 {% include introduction.html %}
 <div class="projects">
   {% for project in site.projects reversed %}
-    <div class="project">
-      <p>{{ project.short_description }}</p>
-      {% if project.link %}
-        <a href="{{ project.link }}">View</a>
-      {% else %}
-        <a>Source Code Private</a>
-      {% endif %}
-    </div>
+  <div class="project">
+    <a href="{{ project.url }}" class="project-item">
+      <div class="project-details">
+        <img src="assets/images/kos-mockup.png">
+        <p><span>{{ project.short_description }}</span></p>
+      </div>
+      <h3 class="project-name">{{ project.name }}</h3>
+    </a>
+  </div>
   {% endfor %}
 </div>
