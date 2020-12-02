@@ -1,6 +1,11 @@
 ---
 name: KOS
+thumbnail: assets/images/kos-mockup.png
 date: 2018-01-01
+tags:
+ - C
+ - Operating Systems
+ - Concurrency
 short_description: An operating system that runs on a simulated MIPS machine and mimics the capabilities of Linux
 link: null
 ---
