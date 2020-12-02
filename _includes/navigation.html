@@ -9,7 +9,7 @@
         {% if item.link == page.url %}
           {% assign current = true %}
         {% elsif item.link == "/blog/" %}
-          {% assign url_prefix = page.url | slice: 0, 5%}
+          {% assign url_prefix = page.url | slice: 0, 5 %}
           {% if url_prefix == "/blog" %}
             {% assign current = true %}
           {% endif %}
