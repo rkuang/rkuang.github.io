@@ -3,8 +3,11 @@
   <head>
     <meta charset="utl-8">
     <title>
+      {% assign prefix_0_10 = page.url | slice: 0, 10 %}
       {% if page.url == '/' %}
         Ricky Kuang - Software Engineer
+      {% elsif prefix_0_10 == "/projects/" %}
+        {{ page.name }} | Ricky Kuang
       {% else %}
         {{ page.title }} | Ricky Kuang
       {% endif %}
