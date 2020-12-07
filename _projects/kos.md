@@ -1,11 +1,12 @@
 ---
 name: KOS
 thumbnail: assets/images/kos-mockup.png
+thumbnail_background_color: "#E3C567;"
 date: 2018-01-01
 tags:
- - C
- - Operating Systems
- - Concurrency
+- C
+- Operating Systems
+- Concurrency
 short_description: An operating system that runs on a simulated MIPS machine and mimics the capabilities of Linux
 link: null
 ---
