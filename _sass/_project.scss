@@ -1,9 +1,11 @@
 $color-project-hover: #d1a30a;
+$thumbnail-width: 360px;
+$thumbnail-height: 270px;
 
 .project-list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, $thumbnail-width);
   row-gap: 32px;
   column-gap: 32px;
   justify-content: center;
@@ -15,15 +17,17 @@ $color-project-hover: #d1a30a;
     .project-list-details {
       position: relative;
       background-color: $color-tertiary;
-      height: 260px;
+      height: $thumbnail-height;
       margin-bottom: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
+      
       .project-list-details-img {
         position: absolute;
-        width: 100%;
+        max-width: 100%;
         height: auto;
+        max-height: 100%;
       }
       .project-list-details-short-description {
         opacity: 0;
