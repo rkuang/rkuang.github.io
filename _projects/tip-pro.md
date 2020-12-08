@@ -19,3 +19,5 @@ While working on Tip Pro, I learned to create custom views to extend Apple's
 UIKit. I implemented the custom views using IBDesignables and IBInspectables,
 enabling me to configure these views directly in XCode's Interface Builder. I
 also learned to use UserDefaults to persist user preferences.
+
+Be on the lookout Tip Pro in the iOS App Store, coming soon!

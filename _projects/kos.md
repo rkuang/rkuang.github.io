@@ -19,3 +19,6 @@ KOS is an operating system for a simluated MIPS machine. Everything had to be
 implemented from scratch: the boot-up process, memory management, exception
 handling, device interrupt handling, system calls, process execution, and much
 more!
+
+Out of all the assignments I did in school, this is probably the one project
+that allowed my to truly understand how computer software worked at a low level.
