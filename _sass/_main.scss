@@ -66,14 +66,67 @@ footer {
 }
 
 .projects-intro {
-  margin: 48px 0 128px 0;
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  color: $color-primary;
-  font-size: 3.5rem;
-  text-align: center;
+  margin: 48px 0 96px 0;
   width: 100%;
   max-width: 600px;
+
+  .projects-intro-header {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    color: $color-primary;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .projects-intro-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    a {
+      font-size: 2rem;
+      opacity: .85;
+      border: none;
+      &:hover {
+        opacity: 1;
+        border: none;
+      }
+    }
+    .projects-intro-links-social-media {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      margin: 0;
+      li {
+        display: inline;
+        list-style: none;
+        float: left;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.projects-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    margin: 0 0 12px 0;
+  }
+  i {
+    font-size: 2rem;
+  }
+  a.projects-scroll-down {
+    opacity: .85;
+    border: none;
+    text-align: center;
+
+    &:hover {
+      opacity: 1;
+      border: none;
+    }
+  }
 }
 
 .container {

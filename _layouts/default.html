@@ -17,8 +17,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Text&family=DM+Serif+Display&display=swap">
-
     <link rel="stylesheet" href="/assets/css/styles.css">
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -36,6 +36,30 @@
       &copy; Ricky Kuang
     </footer>
 
+    <script>
+      const getOffsetTop = element => {
+        let offsetTop = 0;
+        while(element) {
+          offsetTop += element.offsetTop;
+          element = element.offsetParent;
+        }
+        return offsetTop;
+      }
+      const link = document.querySelector(".projects-scroll-down");
+      link.addEventListener("click", clickHandler);
+        
+      function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = getOffsetTop(document.querySelector(href))
+        console.log(offsetTop)
+        
+        scroll({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      }
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPLM0ZWM5V"></script>
     <script>

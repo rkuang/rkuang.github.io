@@ -3,7 +3,16 @@ title: Home
 ---
 
 {% include introduction.html %}
-<div class="project-list">
+<div class="projects-text">
+  <p>
+    See what I've worked on below, or 
+    <a href="/ricky-kuang-resume.pdf" target="_blank">check out my resume.</a>
+  </p>
+  <a class="projects-scroll-down" href="#project-list">
+    <i class="fas fa-chevron-circle-down"></i>
+  </a>
+</div>
+<div id="project-list" class="project-list">
   {% for project in site.projects reversed %}
   <div class="project-list-item">
     <a href="{{ project.url }}" class="project-list-item-link">
