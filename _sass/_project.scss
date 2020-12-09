@@ -94,9 +94,12 @@ $thumbnail-height: 270px;
   .project-detail-details {
     display: flex;
     flex-direction: row;
-    gap: 32px;
     .project-detail-details-text {
       flex: 4 1 0;
+    }
+    .gap {
+      width: 32px;
+      height: 32px;
     }
     .project-detail-details-extras {
       flex: 1 1 0;
@@ -110,6 +113,14 @@ $thumbnail-height: 270px;
       p {
         margin-bottom: 24px;
       }
+    }
+  }
+}
+
+@media (max-width: $screen-large) {
+  .project-detail {
+    .project-detail-details {
+      flex-direction: column;
     }
   }
 }
