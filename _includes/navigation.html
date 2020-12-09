@@ -9,6 +9,11 @@
         <li>
           {% if item.link == page.url %}
             {% assign current = true %}
+          {% elsif item.link == "/" %}
+            {% assign url_prefix = page.url | slice: 0, 9 %}
+            {% if url_prefix == "/projects" %}
+              {% assign current = true %}
+            {% endif %}
           {% elsif item.link == "/blog/" %}
             {% assign url_prefix = page.url | slice: 0, 5 %}
             {% if url_prefix == "/blog" %}
