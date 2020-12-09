@@ -98,7 +98,8 @@ footer {
     .projects-intro-links-social-media {
       display: flex;
       flex-direction: row;
-      gap: 40px;
+      justify-content: space-between;
+      width: 200px;
       margin: 0;
       li {
         display: inline;
