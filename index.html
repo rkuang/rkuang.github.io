@@ -17,7 +17,9 @@ title: Home
   <div class="project-list-item">
     <a href="{{ project.url }}" class="project-list-item-link">
       <div class="project-list-details" style="background-color: {{ project.thumbnail_background_color }};">
-        <img class="project-list-details-img" src="{{ project.thumbnail }}">
+        <div class="project-list-details-img-wrapper">
+          <img class="project-list-details-img" src="{{ project.thumbnail }}">
+        </div>
         <p class="project-list-details-short-description"><span>{{ project.short_description }}</span></p>
       </div>
       <h3 class="project-list-name">{{ project.name }}</h3>

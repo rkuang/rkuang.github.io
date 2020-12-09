@@ -13,6 +13,9 @@ $color-text: RGBA($color-primary-rgb, .95);
 $color-text-sunken: RGBA($color-primary-rgb, .7);
 $padding-nav-links: 32px;
 $container-width: 1144px;
+$screen-large: 1000px;
+$screen-medium: 700px;
+$screen-small: 400px;
 
 ::selection {
   background: RGBA($color-tertiary-rgb, 0.3);
@@ -107,6 +110,22 @@ footer {
   }
 }
 
+@media (max-width: $screen-medium) {
+  .projects-intro {
+    .projects-intro-header {
+      font-size: 2.75rem;
+    }
+  }
+}
+
+@media (max-width: $screen-small) {
+  .projects-intro {
+    .projects-intro-header {
+      font-size: 2.25rem;
+    }
+  }
+}
+
 .projects-text {
   display: flex;
   flex-direction: column;
@@ -131,5 +150,18 @@ footer {
 }
 
 .container {
+  width: 90%;
   max-width: $container-width;
 }
+
+// @media (min-width: 1024px) {
+
+// }
+
+// @media (min-width: 768px) {
+  
+// }
+
+// @media (min-width: 320px) {
+  
+// }

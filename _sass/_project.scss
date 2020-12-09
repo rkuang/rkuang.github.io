@@ -5,7 +5,7 @@ $thumbnail-height: 270px;
 .project-list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, $thumbnail-width);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 32px;
   column-gap: 32px;
   justify-content: center;
@@ -18,17 +18,25 @@ $thumbnail-height: 270px;
     .project-list-details {
       position: relative;
       background-color: $color-tertiary;
-      height: $thumbnail-height;
+      padding-top: 75%;
       margin-bottom: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
       
-      .project-list-details-img {
+      .project-list-details-img-wrapper {
         position: absolute;
-        max-width: 100%;
-        height: auto;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .project-list-details-img {
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+        }
       }
       .project-list-details-short-description {
         opacity: 0;
@@ -37,6 +45,7 @@ $thumbnail-height: 270px;
         width: 100%;
         height: 100%;
         margin: 0;
+        top: 0;
 
         display: flex;
         justify-content: center;
@@ -61,6 +70,18 @@ $thumbnail-height: 270px;
         }
       }
     }
+  }
+}
+
+@media (max-width: $screen-large) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $screen-medium) {
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

@@ -36,38 +36,56 @@
       &copy; Ricky Kuang
     </footer>
 
+    <!-- Responsive navigation bar -->
     <script>
-      const getOffsetTop = element => {
-        let offsetTop = 0;
-        while(element) {
-          offsetTop += element.offsetTop;
-          element = element.offsetParent;
-        }
-        return offsetTop;
+    let navbarLinks = document.getElementById("navbar-links");
+    let navbarMenu = document.getElementById("navbar-menu");
+    navbarMenu.addEventListener("click", navDropDown);
+    function navDropDown() {
+      if (navbarMenu.classList.contains("active")) {
+        navbarMenu.classList.remove("active");
+        navbarLinks.classList.remove("active");
+      } else {
+        navbarMenu.classList.add("active");
+        navbarLinks.classList.add("active");
       }
-      const link = document.querySelector(".projects-scroll-down");
-      link.addEventListener("click", clickHandler);
-        
-      function clickHandler(e) {
-        e.preventDefault();
-        const href = this.getAttribute("href");
-        const offsetTop = getOffsetTop(document.querySelector(href))
-        console.log(offsetTop)
-        
-        scroll({
-          top: offsetTop,
-          behavior: "smooth"
-        });
-      }
+    }
     </script>
+    {% if page.url == "/" %}
+    <!-- Smooth scroll -->
+    <script>
+    const getOffsetTop = element => {
+      let offsetTop = 0;
+      while(element) {
+        offsetTop += element.offsetTop;
+        element = element.offsetParent;
+      }
+      return offsetTop;
+    }
+    const link = document.querySelector(".projects-scroll-down");
+    link.addEventListener("click", clickHandler);
+      
+    function clickHandler(e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+      const offsetTop = getOffsetTop(document.querySelector(href))
+      console.log(offsetTop)
+      
+      scroll({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+    }
+    </script>
+    {% endif %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPLM0ZWM5V"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-XPLM0ZWM5V');
+    gtag('config', 'G-XPLM0ZWM5V');
     </script>
   </body>
 </html>
