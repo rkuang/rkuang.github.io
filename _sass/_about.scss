@@ -1,6 +1,6 @@
 $resume-column-width: ($container-width - 56px) / 3;
-$profile-img-width: 360px;
-$profile-text-width: $container-width - $profile-img-width - 32px;
+$profile-img-min-width-large: 324px;
+$profile-img-min-width-medium: 280px;
 
 .about {
   display: flex;
@@ -17,15 +17,50 @@ $profile-text-width: $container-width - $profile-img-width - 32px;
   justify-content: space-between;
 
   .profile-text {
-    max-width: $profile-text-width;
+    flex: 5 1 0;
     p {
       margin-bottom: 2rem;
     }
   }
 
-  img {
-    flex-shrink: 1;
-    max-width: $profile-img-width;
+  .gap {
+    height: 32px;
+    width: 32px;
+  }
+
+  .profile-img {
+    flex: 2 1 0;
+    img {
+      height: auto;
+      width: 100%;
+      min-width: $profile-img-min-width-large;
+    }
+  }
+}
+
+@media (max-width: $screen-large) {
+  .profile {
+    .profile-text {
+      flex: 5 1 0;
+    }
+    .profile-img {
+      flex: 3 1 0;
+      img {
+        min-width: $profile-img-min-width-medium;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-medium) {
+  .profile {
+    flex-direction: column-reverse;
+    align-items: center;
+    .profile-img {
+      img {
+        max-width: $profile-img-min-width-large;
+      }
+    }
   }
 }
 
