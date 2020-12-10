@@ -1,4 +1,5 @@
-venv/
-.vscode/
 .DS_Store
-browserconfig.xml
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

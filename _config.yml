@@ -1,0 +1,27 @@
+collections:
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      permalink: "/projects/:title:output_ext"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/blog/:title:output_ext"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-target-blank

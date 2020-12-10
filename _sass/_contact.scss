@@ -1,0 +1,71 @@
+.contact {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .contact-text {
+    flex: 1 1 0;
+    font-size: 2rem;
+  }
+
+  .gap {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-form {
+    flex: 1 1 0;
+    
+    .contact-header {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3em;
+      text-align: center;
+    }
+  
+    .contact-form {
+      width: 100%;
+
+      > * {
+        width: 100%;
+      }
+
+      #message {
+        height: 120px;
+      }
+  
+      .contact-form-button {
+        -webkit-appearance: none;
+        width: auto;
+        height: 40px;
+        font-size: 0.85rem;
+        color: $color-action;
+        border-color: $color-action;
+        &:hover {
+          color: $color-text-sunken;
+          border-color: $color-text-sunken;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-medium) {
+  .contact {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $screen-small) {
+  .contact {
+    .contact-text{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+label {
+  > input, > textarea {
+    width: 100%;
+    margin-top: 8px;
+  }
+}

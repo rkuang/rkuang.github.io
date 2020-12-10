@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utl-8">
+    <title>
+      {% assign prefix_0_10 = page.url | slice: 0, 10 %}
+      {% if page.url == '/' %}
+        Ricky Kuang - Software Engineer
+      {% elsif prefix_0_10 == "/projects/" %}
+        {{ page.name }} | Ricky Kuang
+      {% else %}
+        {{ page.title }} | Ricky Kuang
+      {% endif %}
+    </title>
+    <meta name="description" content="Ricky Kuang is a software engineer living in Los Angeles, CA">
+    <meta name="author" content="Ricky Kuang">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Text&family=DM+Serif+Display&display=swap">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff8a01">
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body>
+    {% include navigation.html %}
+    <div class="content container">
+      {{ content }}
+    </div>
+    <footer>
+      &copy; Ricky Kuang
+    </footer>
+
+    <!-- Responsive navigation bar -->
+    <script>
+    let navbarLinks = document.getElementById("navbar-links");
+    let navbarMenu = document.getElementById("navbar-menu");
+    navbarMenu.addEventListener("click", navDropDown);
+    function navDropDown() {
+      if (navbarMenu.classList.contains("active")) {
+        navbarMenu.classList.remove("active");
+        navbarLinks.classList.remove("active");
+      } else {
+        navbarMenu.classList.add("active");
+        navbarLinks.classList.add("active");
+      }
+    }
+    </script>
+    <!-- Smooth scroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          // Store hash
+          var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function(){
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPLM0ZWM5V"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XPLM0ZWM5V');
+    </script>
+  </body>
+</html>

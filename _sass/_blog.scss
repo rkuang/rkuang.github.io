@@ -1,0 +1,38 @@
+.blog-empty {
+  text-align: center;
+  h1 {
+    font-size: 2.5rem;
+    font-family: "DM Serif Text", serif;
+  }
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.blog-item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  p, h2 {
+    margin: 0;
+  }
+
+  h2 {
+    font-family: "DM Serif Text", serif;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: .7rem;
+  }
+}
+
+.blog-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  margin: 8px 0 4px 0;
+}

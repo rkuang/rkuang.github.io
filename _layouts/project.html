@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="project-detail">
+  <h1 class="project-detail-title">{{ page.name }}</h1>
+  <div class="project-detail-details">
+    <div class="project-detail-details-text">
+      {{ content }}
+    </div>
+    <div class="gap"></div>
+    <div class="project-detail-details-extras">
+      <h2>Tags</h2>
+      <p class="project-details-details-tags">
+        {{ page.tags | join: ", "}}
+      </p>
+      <h2>Year</h2>
+      <p>{{ page.date | date: "%Y" }}</p>
+      {% if page.link != null %}
+      <a href="{{ page.link }}" rel="noopener noreferrer" target="_blank">View</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
